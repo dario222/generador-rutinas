@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Rutinas · Gym Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏋️ Generador de Rutinas</h1>
+            <p>Responde estas preguntas y obtén tu rutina personalizada</p>
+        </header>
+
+        <!-- Formulario principal -->
+        <form id="routine-form" class="routine-form">
+            <div class="form-group">
+                <label for="goal">¿Cuál es tu objetivo principal?</label>
+                <select id="goal" name="goal" required>
+                    <option value="">-- Selecciona --</option>
+                    <option value="strength">💪 Fuerza</option>
+                    <option value="hypertrophy">🔥 Volumen (Hipertrofia)</option>
+                    <option value="tone">✨ Tonificación</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="days">¿Cuántos días puedes entrenar?</label>
+                <select id="days" name="days" required>
+                    <option value="">-- Selecciona --</option>
+                    <option value="3">3 días por semana</option>
+                    <option value="4">4 días por semana</option>
+                    <option value="5">5 días por semana</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="location">¿Dónde vas a entrenar?</label>
+                <select id="location" name="location" required>
+                    <option value="">-- Selecciona --</option>
+                    <option value="gym">🏢 Gimnasio</option>
+                    <option value="home">🏠 Casa (peso corporal)</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-generar">Generar mi rutina</button>
+        </form>
+
+        <!-- Área de resultados (oculta inicialmente) -->
+        <div id="result-container" class="result-container hidden">
+            <h2>✅ Tu rutina personalizada</h2>
+            <div id="routine-display" class="routine-card">
+                <!-- Aquí aparecerá la rutina generada -->
+            </div>
+            <button id="btn-new-routine" class="btn-secondary">🔄 Crear otra rutina</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
